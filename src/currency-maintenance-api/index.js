@@ -1,3 +1,3 @@
-import {transformDropdownCurrencies,filterCurrencyLabels,filterCurrency} from "./currency-maintenance";
+import {transformDropdownCurrencies,filterCurrencyLabels} from "./currency-maintenance";
 
-export {transformDropdownCurrencies,filterCurrency,filterCurrencyLabels}
+export {transformDropdownCurrencies,filterCurrencyLabels}

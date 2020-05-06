@@ -1,5 +1,4 @@
 import React from 'react';
-import convertValue from "../convert-function";
 
 const filterCurrencyLabels = [
         {
@@ -64,8 +63,6 @@ const filterCurrencyLabels = [
         }
 ];
 
-const filterCurrency = ["USD","UAH","RUB","EUR","TRY","CAD","CNY","JPY","CHF","GBP","ILS","AED","PLN","CZK","SEK"];
-
 
 const transformDropdownCurrencies = (currencyLabels,handlerToChangeState) => {
     return currencyLabels.map((itemCurrency) => {
@@ -85,5 +82,5 @@ const transformDropdownCurrencies = (currencyLabels,handlerToChangeState) => {
 
 
 
-export {transformDropdownCurrencies, filterCurrency, filterCurrencyLabels};
+export {transformDropdownCurrencies, filterCurrencyLabels};
 

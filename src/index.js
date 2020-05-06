@@ -13,7 +13,7 @@ import './general.scss';
 import Nav from "./components/nav";
 import Converter from "./components/converter";
 import Course from "./components/course";
-import {filterCurrency,filterCurrencyLabels} from "./currency-maintenance-api";
+import {filterCurrencyLabels} from "./currency-maintenance-api";
 
 
 
@@ -30,9 +30,14 @@ class App extends Component {
             .then((res) => res.json())
             .then((res) => {
                 const {rates} = res;
+                const filteredCodes = filterCurrencyLabels
+                    .map(itemCurrency => Object.values(itemCurrency)[1]);
+
                 const filteredCurrencies = Object
                     .entries(rates)
-                    .filter((currency) => filterCurrency.includes(currency[0]));
+                    .filter((currency) => filteredCodes.includes(currency[0]));
+
+
                 this.setState({
                     course:Object.fromEntries(filteredCurrencies),
                     labelsForJSX:filterCurrencyLabels
