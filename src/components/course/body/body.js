@@ -1,19 +1,16 @@
 import React from 'react';
-import convertValue from "../../../convert-function";
+import CourseItem from "../course-item";
 
 
 
 const BodyCourse = ({labels,course,currency}) => {
 
     const labelsCurrenciesJSX = labels ? labels.map((itemLabelCurrency) => {
-        const {label,code} = itemLabelCurrency;
-        return (
-            <tr key={code}>
-                <th scope="code">{code}</th>
-                <td>{label}</td>
-                <td>{convertValue(1,currency,code,course)}</td>
-            </tr>
-        )
+        const {label} = itemLabelCurrency;
+        return <CourseItem key={label}
+                           itemLabelCurrency={itemLabelCurrency}
+                           course={course}
+                           currency={currency}/>
     }) : null;
 
 

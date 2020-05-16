@@ -1,6 +1,6 @@
 import React from 'react';
 
-const filterCurrencyLabels = [
+const currencyLabels = [
         {
             label:"Доллар США",
             code:"USD"
@@ -82,5 +82,5 @@ const transformDropdownCurrencies = (currencyLabels,handlerToChangeState) => {
 
 
 
-export {transformDropdownCurrencies, filterCurrencyLabels};
+export {transformDropdownCurrencies, currencyLabels};
 

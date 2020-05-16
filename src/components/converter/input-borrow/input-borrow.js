@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
-import {transformDropdownCurrencies} from "../../../currency-maintenance-api";
+import withLabelsInput from "../../hoc-helper";
+import {transformDropdownCurrencies} from "../../../currency-maintenance";
 
 
-export default class InputBorrow extends Component {
+class InputBorrow extends Component {
 
     state = {
         inputValue:'',
@@ -18,7 +19,7 @@ export default class InputBorrow extends Component {
     render() {
         let { inputValue } = this.state;
 
-        const {labels,fromCurrency} = this.props;
+        const { labels,fromCurrency } = this.props;
 
         const dropdownCurrencies = labels ? transformDropdownCurrencies(labels,this.props.onSetFromCurrency) : null;
 
@@ -44,3 +45,15 @@ export default class InputBorrow extends Component {
         )
     }
 }
+
+
+
+
+
+
+
+
+export default withLabelsInput(InputBorrow)
+
+
+

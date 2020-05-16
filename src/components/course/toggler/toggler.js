@@ -1,5 +1,5 @@
 import React from 'react'
-import {transformDropdownCurrencies} from "../../../currency-maintenance-api";
+import {transformDropdownCurrencies} from "../../../currency-maintenance";
 
 const DropdownCourse = ({labels,currency,onSetAnotherCurrency}) => {
 

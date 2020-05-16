@@ -2,9 +2,8 @@ import React,{Component} from "react";
 import InputBorrow from "./input-borrow";
 import InputReceive from "./input-receive";
 import Note from "./note";
-import {Consumer} from "../context";
 
-import convertValue from "../../convert-function";
+import convertValue from "../../apis/convert-api";
 import './converter.scss';
 import arrows from '../../images/arrows.png';
 
@@ -51,44 +50,22 @@ export default class Converter extends Component {
     const convertedAmount = !course || !amount ? '' : convertValue(amount,from,to,course);
 
 
+
     return (
         <div className="mt-5 d-flex flex-column align-items-center">
 
-            <Consumer>
-                {
-                    ({labelsForJSX}) => {
-                    return (
-                        <InputBorrow onChangeValue={this.onChangeValue}
-                                     onSetFromCurrency={this.onSetFromCurrency}
-                                     fromCurrency={from}
-                                     labels={labelsForJSX} />
-                        )
-                    }
-                }
-            </Consumer>
-
-
+            <InputBorrow onChangeValue={this.onChangeValue}
+                         onSetFromCurrency={this.onSetFromCurrency}
+                         fromCurrency={from} />
 
             <div className="mt-4 mb-4 col-10">
                 <img src={arrows} alt="Arrows" className="cursor-pointer" onClick={() => this.onSwitchCurrencies()}/>
             </div>
 
 
-
-            <Consumer>
-                {
-                    ({labelsForJSX}) => {
-                        return (
-                            <InputReceive convertedAmount={convertedAmount}
-                                          onSetToCurrency={this.onSetToCurrency}
-                                          toCurrency={to}
-                                          labels={labelsForJSX}/>
-                        )
-                    }
-                }
-            </Consumer>
-
-
+            <InputReceive convertedAmount={convertedAmount}
+                          onSetToCurrency={this.onSetToCurrency}
+                          toCurrency={to}/>
 
             <Note />
         </div>

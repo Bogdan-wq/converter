@@ -21,15 +21,12 @@ export default class Course extends Component {
 
         const {currency} = this.state;
 
-
-
-
         return (
             <div className="mt-3 d-flex flex-column">
                 <Consumer>
                     {
-                        ({labelsForJSX}) => {
-                            return <DropdownCourse labels={labelsForJSX}
+                        ({labels}) => {
+                            return <DropdownCourse labels={labels}
                                                    currency={currency}
                                                    onSetAnotherCurrency={this.onSetAnotherCurrency}/>
                         }
@@ -38,8 +35,8 @@ export default class Course extends Component {
 
                 <Consumer>
                     {
-                        ({labelsForJSX,course}) => {
-                            return <BodyCourse labels={labelsForJSX}
+                        ({labels,course}) => {
+                            return <BodyCourse labels={labels}
                                                course={course}
                                                currency={currency}/>
                         }

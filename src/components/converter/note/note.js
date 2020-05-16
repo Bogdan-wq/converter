@@ -1,5 +1,5 @@
 import React from 'react';
-import date from "../../../date-api";
+import date from "../../../apis/date-api";
 
 const Note = () => {
     const {day,month,year} = date();

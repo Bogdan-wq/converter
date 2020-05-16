@@ -2,8 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e78854fe-ae21-402f-beec-5789cd2d86e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/fetch-client-api/fetch-client-api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/fetch-client-api/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course/course-item/course-item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course/course-item/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/error-indicator/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/hoc-helper/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter/converter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/converter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter/converter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/converter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter/input-borrow/input-borrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/input-borrow/input-borrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter/input-receive/input-receive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/input-receive/input-receive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter/note/note.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/note/note.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course/body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/body/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/course.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/course/toggler/toggler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/toggler/toggler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convert-function/convert-function.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/convert-api/convert-function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/convert-function/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/convert-api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/currency-maintenance-api/currency-maintenance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency-maintenance/currency-maintenance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/currency-maintenance-api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency-maintenance/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date-api/date-api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/date-api/date-api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/date-api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/date-api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/general.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +65,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\react\Converter\src" />
-      <recent name="D:\projects\react\Converter\src\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\react\Converter\src\images" />
       <recent name="D:\projects\react\Converter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\react\Converter\src\apis" />
+      <recent name="D:\projects\react\Converter\src" />
+      <recent name="D:\projects\react\Converter\src\components" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -67,7 +92,13 @@
       <workItem from="1588672506975" duration="19437000" />
       <workItem from="1588768708951" duration="3550000" />
       <workItem from="1588791783232" duration="19000" />
-      <workItem from="1588799441815" duration="953000" />
+      <workItem from="1588799441815" duration="1189000" />
+      <workItem from="1588800844986" duration="65000" />
+      <workItem from="1588851086081" duration="44000" />
+      <workItem from="1588971568967" duration="566000" />
+      <workItem from="1589060877789" duration="92000" />
+      <workItem from="1589125889907" duration="133000" />
+      <workItem from="1589635129370" duration="5101000" />
     </task>
     <servers />
   </component>
@@ -75,14 +106,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="370" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588620126580">
+    <state x="370" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589637371856">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="370" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.984@0.0.1280.984" timestamp="1588620126580" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1588791800722">
+    <state x="370" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.984@0.0.1280.984" timestamp="1589637371856" />
+    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1589060968437">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1588791800722" />
+    <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1589060968437" />
     <state x="296" y="226" key="run.anything.popup" timestamp="1588694957937">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

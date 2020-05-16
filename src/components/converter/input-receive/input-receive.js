@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
-import {transformDropdownCurrencies} from "../../../currency-maintenance-api";
+import {transformDropdownCurrencies} from "../../../currency-maintenance";
+import withLabelsInput from "../../hoc-helper";
 
-export default class InputReceive extends Component {
+class InputReceive extends Component {
 
 
     loseFocus = (e) => {
@@ -38,3 +39,7 @@ export default class InputReceive extends Component {
         )
     }
 }
+
+
+
+export default withLabelsInput(InputReceive)
