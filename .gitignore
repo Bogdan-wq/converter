@@ -1,5 +1,2 @@
 /node_modules
-/.babelrc
 /package-lock.json
-/package.json
-/webpack.config.js
