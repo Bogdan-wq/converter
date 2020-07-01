@@ -1,3 +1,3 @@
-import {transformDropdownCurrencies,currencyLabels} from "./currency-maintenance";
+import currencies from "./currency-maintenance";
 
-export {transformDropdownCurrencies,currencyLabels}
+export default currencies;

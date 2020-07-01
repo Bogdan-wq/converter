@@ -1,6 +1,4 @@
-import React from 'react';
-
-const currencyLabels = [
+const currencies = [
         {
             label:"Доллар США",
             code:"USD"
@@ -64,23 +62,7 @@ const currencyLabels = [
 ];
 
 
-const transformDropdownCurrencies = (currencyLabels,handlerToChangeState) => {
-    return currencyLabels.map((itemCurrency) => {
-        const {label, code} = itemCurrency
-        return (
-            <button className="dropdown-item" key={code}
-                    onClick={() => handlerToChangeState(code)}>
-                <b>{code}</b> {label}
-            </button>
-        )
-    })
-}
 
 
-
-
-
-
-
-export {transformDropdownCurrencies, currencyLabels};
+export default currencies
 
