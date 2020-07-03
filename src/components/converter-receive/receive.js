@@ -1,8 +1,12 @@
 import React from 'react'
 import {connect} from "react-redux";
-import {changeToCurrency} from "../../actions";
+import {calculate, changeToCurrency} from "../../actions";
+import transformCurrencies from "../../apis/transform-currencies";
 
-const Receive = ({receiveInputValue,to,labels,changeCurrency}) => {
+const Receive = (props) => {
+
+    const {receiveInputValue,to,
+            labels,changeCurrency} = props
 
     return (
         <div className="d-flex align-items-end justify-content-between col-10">
@@ -21,17 +25,7 @@ const Receive = ({receiveInputValue,to,labels,changeCurrency}) => {
                 </button>
                 <div className="dropdown-menu overflow-auto fixed-height">
                     {
-                        labels.map((itemCurrencyLabel) => {
-                            const {label,code} = itemCurrencyLabel;
-                            return (
-                                <button
-                                    className="dropdown-item"
-                                    key={code}
-                                    onClick={() => changeCurrency(code)}>
-                                    <b>{code}</b>{label}
-                                </button>
-                            )
-                        })
+                         transformCurrencies(changeCurrency,labels)
                     }
                 </div>
             </div>
@@ -39,18 +33,15 @@ const Receive = ({receiveInputValue,to,labels,changeCurrency}) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        receiveInputValue: state.receiveInputValue,
-        to:state.to,
-        labels:state.labels,
-    }
+const mapStateToProps = ({receiveInputValue,to,labels}) => {
+    return {receiveInputValue,to,labels}
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
         changeCurrency:(currency) => {
             dispatch(changeToCurrency(currency))
+            dispatch(calculate())
         }
     }
 }

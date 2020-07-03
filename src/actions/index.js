@@ -11,16 +11,9 @@ const fetchCourseFail = () => {
     }
 }
 
-const changeBorrowInput = (value) => {
+const setValueToConvert = (value) => {
     return {
-        type:'CHANGE_BORROW_INPUT_VALUE',
-        payload:value,
-    }
-}
-
-const changeReceiveInput = (value) => {
-    return {
-        type:'CHANGE_RECEIVE_INPUT_VALUE',
+        type:'SET_VALUE_TO_CONVERT',
         payload:value,
     }
 }
@@ -40,12 +33,39 @@ const changeFromCurrency = (currency) => {
     }
 }
 
+const switchCurrencies = () => {
+    return {
+        type:'SWITCH_CURRENCIES'
+    }
+}
+
+const calculate = () => {
+    return {
+        type:'CALCULATE',
+    }
+}
+
+const calculateCourseTo = () => {
+    return {
+        type:'CALCULATE_COURSE_TO'
+    }
+}
+
+const changeCourseBase = (currency) => {
+    return {
+        type:'CHANGE_COURSE_BASE',
+        payload:currency,
+    }
+}
 
 export {
     fetchCourseSuccess,
     fetchCourseFail,
-    changeBorrowInput,
-    changeReceiveInput,
+    setValueToConvert,
     changeFromCurrency,
     changeToCurrency,
+    switchCurrencies,
+    calculate,
+    calculateCourseTo,
+    changeCourseBase,
 }

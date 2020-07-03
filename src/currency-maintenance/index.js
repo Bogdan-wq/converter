@@ -1,3 +1,3 @@
 import currencies from "./currency-maintenance";
 
-export default currencies;
+export default currencies

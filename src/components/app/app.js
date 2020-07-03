@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 
 import './app.scss';
 import Header from "../header";
-import {fetchCourseFail, fetchCourseSuccess} from "../../actions";
+import {fetchCourseFail, fetchCourseSuccess, calculateCourseTo} from "../../actions";
 import Spinner from "../spinner";
 import ErrorIndicator from "../error-indicator";
 import {Route} from "react-router";
@@ -75,7 +75,10 @@ const mapDispatchToProps = (dispatch) => {
                     return Object.fromEntries(course)
 
                 })
-                .then((course) => dispatch(fetchCourseSuccess(course)))
+                .then((course) => {
+                    dispatch(fetchCourseSuccess(course))
+                    dispatch(calculateCourseTo())
+                })
                 .catch(() => dispatch(fetchCourseFail()))
         }
     }

@@ -1,3 +1,5 @@
+import React from "react";
+
 const currencies = [
         {
             label:"Доллар США",
@@ -64,5 +66,6 @@ const currencies = [
 
 
 
-export default currencies
+
+export default currencies;
 

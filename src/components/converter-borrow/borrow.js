@@ -1,19 +1,12 @@
 import React from 'react'
-import {changeBorrowInput, changeReceiveInput, changeFromCurrency} from "../../actions";
+import {setValueToConvert, changeFromCurrency, calculate} from "../../actions";
 import {connect} from 'react-redux'
-import fx from 'money';
-
+import transformCurrencies from "../../apis/transform-currencies";
 
 const Borrow = (props) => {
 
-    const { borrowInputValue,
-            calculate,
-            from,
-            to,
-            course,
-            labels,
-            changeCurrency
-    } = props;
+    const { borrowInputValue, setValueToBorrowInput,
+            from, labels, changeCurrency} = props;
 
 
     return (
@@ -23,7 +16,7 @@ const Borrow = (props) => {
                 <input type="number"
                        className="form-control border border-left-0 border-right-0 border-top-0 font-weight-bold text-medium"
                        id="borrow"
-                       onChange={(e) => calculate(e.target.value,from,to,course)}
+                       onChange={(e) => setValueToBorrowInput(e.target.value)}
                        value={borrowInputValue}/>
             </div>
             <div className="dropdown dropright flex-fill d-flex justify-content-end">
@@ -32,17 +25,7 @@ const Borrow = (props) => {
                 </button>
                 <div className="dropdown-menu overflow-auto fixed-height">
                     {
-                        labels.map((itemCurrencyLabel) => {
-                            const {label,code} = itemCurrencyLabel;
-                            return (
-                                <button
-                                    className="dropdown-item"
-                                    key={code}
-                                    onClick={() => changeCurrency(code)}>
-                                    <b>{code}</b>{label}
-                                </button>
-                            )
-                        })
+                        transformCurrencies(changeCurrency,labels)
                     }
                 </div>
             </div>
@@ -51,25 +34,19 @@ const Borrow = (props) => {
 }
 
 
-const mapStateToProps = ({borrowInputValue,from,course,to,labels}) => {
-    return {borrowInputValue,from,course,to,labels}
+const mapStateToProps = ({borrowInputValue,from,labels}) => {
+    return {borrowInputValue,from,labels}
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        calculate:(value,from,to,course) => {
-            dispatch(changeBorrowInput(value))
-            if(!value) {
-                dispatch(changeReceiveInput(''))
-            } else {
-                fx.rates = course;
-                const converted = fx.convert(parseInt(value,10),{from,to}).toFixed(2)
-                console.log(converted)
-                dispatch(changeReceiveInput(converted))
-            }
+        setValueToBorrowInput:(value) => {
+            dispatch(setValueToConvert(value))
+            dispatch(calculate())
         },
         changeCurrency:(currency) => {
             dispatch(changeFromCurrency(currency))
+            dispatch(calculate())
         }
     }
 }

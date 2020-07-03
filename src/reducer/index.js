@@ -9,6 +9,8 @@ const initialState = {
     labels:currencies,
     borrowInputValue:'',
     receiveInputValue:'',
+    courseBase:'RUB',
+    courseRelatedToBase:{}
 }
 
 const reducer = (state = initialState,action) => {
@@ -29,16 +31,16 @@ const reducer = (state = initialState,action) => {
                 error: true,
                 course:null,
             }
-        case 'CHANGE_BORROW_INPUT_VALUE':
-            return {
-                ...state,
-                borrowInputValue: action.payload,
+        case 'SET_VALUE_TO_CONVERT':
+            if(!action.payload) {
+                return {
+                    ...state,
+                    borrowInputValue:''
+                }
             }
-
-        case 'CHANGE_RECEIVE_INPUT_VALUE':
             return {
                 ...state,
-                receiveInputValue: action.payload,
+                borrowInputValue: parseInt(action.payload,10)
             }
 
         case 'CHANGE_TO_CURRENCY':
@@ -52,6 +54,54 @@ const reducer = (state = initialState,action) => {
                 ...state,
                 from: action.payload,
             }
+
+        case 'CALCULATE':
+            if(!state.borrowInputValue) {
+                return {
+                    ...state,
+                    receiveInputValue: '',
+                }
+            }
+            else {
+                const amountConverted = (state.course[state.to] / state.course[state.from]) * state.borrowInputValue;
+
+                return {
+                    ...state,
+                    receiveInputValue: parseFloat(amountConverted.toFixed(2))
+                }
+            }
+
+        case 'CALCULATE_COURSE_TO':
+
+            const courseBasedOnUsd = Object.entries(state.course)
+
+            const courseBasedOnChosen = courseBasedOnUsd.map((itemCurrency) => {
+                const [code,rateToUsd] = itemCurrency;
+                const rate = (rateToUsd / state.course[state.courseBase]).toFixed(2)
+
+                const rateToFixed = parseFloat(rate)
+                return [code,rateToFixed]
+            })
+
+            return {
+                ...state,
+                 courseRelatedToBase: Object.fromEntries(courseBasedOnChosen)
+            }
+
+
+        case 'CHANGE_COURSE_BASE':
+            return {
+                ...state,
+                courseBase: action.payload,
+            }
+
+        case 'SWITCH_CURRENCIES':
+            return {
+                ...state,
+                to:state.from,
+                from:state.to,
+            }
+
         default:
             return state;
     }

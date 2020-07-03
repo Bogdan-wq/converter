@@ -2,54 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e78854fe-ae21-402f-beec-5789cd2d86e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-borrow/borrow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-borrow/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-receive/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-receive/receive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-switch/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/converter-switch/switch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/custom-link/custom-link.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/custom-link/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header-nav/nav.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header-note/header-note.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header-note/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/transform-currencies/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/converter-footer-note/footer-note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/converter-footer-note/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-body/course-body.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-body/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-item/course-item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-item/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-toggler/course-toggler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/course-toggler/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/convert-api/convert-function.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apis/convert-api/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/context/context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/context/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter-borrow/borrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter-borrow/borrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter-receive/receive.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter-receive/receive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/converter-switch/switch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter-switch/switch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/converter/converter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/converter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/converter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/converter/converter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/input-borrow/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/input-borrow/input-borrow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/input-receive/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/input-receive/input-receive.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/note/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/converter/note/note.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/body/body.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/body/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/course-item/course-item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/course-item/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/course/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/course/course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/toggler/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/course/toggler/toggler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hoc-helper/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header-nav/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav/nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/spinner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/currency-maintenance/currency-maintenance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency-maintenance/currency-maintenance.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/currency-maintenance/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/currency-maintenance/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +104,10 @@
       <workItem from="1593350256644" duration="5000" />
       <workItem from="1593459530612" duration="586000" />
       <workItem from="1593461200343" duration="6000" />
-      <workItem from="1593603137856" duration="17619000" />
+      <workItem from="1593603137856" duration="17849000" />
+      <workItem from="1593629566568" duration="224000" />
+      <workItem from="1593709986960" duration="9664000" />
+      <workItem from="1593787640576" duration="2543000" />
     </task>
     <servers />
   </component>
@@ -144,13 +119,17 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="370" y="239" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.984@0.0.1280.984" timestamp="1589637371856" />
-    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1593461204785">
+    <state x="420" y="247" key="FileChooserDialogImpl" timestamp="1593629430865">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1593461204785" />
+    <state x="420" y="247" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1593629430865" />
     <state x="296" y="226" key="run.anything.popup" timestamp="1588694957937">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="296" y="226" key="run.anything.popup/0.0.1280.984@0.0.1280.984" timestamp="1588694957937" />
+    <state x="303" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1593710413068">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="303" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1280.984@0.0.1280.984" timestamp="1593710413068" />
   </component>
 </project>

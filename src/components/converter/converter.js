@@ -2,6 +2,7 @@ import React from 'react'
 import Borrow from "../converter-borrow";
 import Receive from "../converter-receive";
 import Switch from "../converter-switch";
+import FooterNote from "../converter-footer-note";
 import './converter.scss';
 
 const Converter = () => {
@@ -10,6 +11,7 @@ const Converter = () => {
             <Borrow />
             <Switch />
             <Receive/>
+            <FooterNote/>
         </div>
     )
 }
